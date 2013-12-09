@@ -30,6 +30,13 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <PlatformTarget>x86</PlatformTarget>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp -f ${TargetFile} &quot;/run/media/davorin/Windows 7/KSP-test/GameData/TextureReplacer&quot;" workingdir="${TargetDir}" />
+        <Command type="AfterBuild" command="cp -f ${TargetFile} /home/davorin/TextureReplacer" workingdir="${TargetDir}" />
+        <Command type="AfterBuild" command="cp -f ${TargetFile} &quot;/run/media/davorin/Windows 7/KSP-0.22/GameData/TextureReplacer&quot;" workingdir="${TargetDir}" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
